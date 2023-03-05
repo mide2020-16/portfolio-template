@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Russo+One&display=swap');
+*{
+  scroll-behavior: smooth;
+}
 :root{
   --mainColor: #bbb8b8;
   --secondaryColor: #fff;
@@ -8,6 +12,7 @@
   --previewBackground: rgb(252, 249, 243,0.8);
   --previewShadow: #f0ead6;
   --btnColor: black;
+  --themeHover: black;
 }
 body *{
   transition: 0.3s;
@@ -19,7 +24,9 @@ html, body{
 
 h1,h2,h3,h4,h5,h6,strong{
   color: var(--mainText);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Russo One', sans-serif;
+  letter-spacing: 1.5px;
+  
   font-weight: 500;
 }
 h1{font-size: 56px;}
@@ -35,13 +42,14 @@ a{
 ul{
   list-style: none;
 }
-p,li, span, label, input,textarea{
+p,li, span, label, input,textarea, a{
 color: var(--mainText);
-font-family:Verdana, Geneva, Tahoma, sans-serif;
+font-family: 'Poppins', sans-serif;
 }
 img{
   width: 300px;
 }
+
 .s1{
   background-color: var(--mainColor);
   border-bottom: var(--borderColor);
@@ -61,6 +69,18 @@ img{
   min-height: 10em;
   text-align: center;
   align-content: center;
+}
+.greeting-wrapper .name{
+  font-family: 'Russo one', Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 2px;
+  color: var(--mainText);
+  transition:all .8s;
+  cursor: pointer;
+}
+.greeting-wrapper .name:hover{
+  color: yellow;
+  text-decoration: underline;
+  transform: translateY(-20px);
 }
 .intro-wrapper{
   width: auto;
@@ -134,6 +154,7 @@ img{
   justify-content: center;
 }
 .theme-dot{
+  position: relative;
   height: 30px;
   width: 30px;
   border-radius: 50%;
@@ -146,17 +167,50 @@ img{
 .theme-dot:hover{
   border-width: 5px;
 }
+.theme-dot:hover::after{
+  position: absolute;
+  width: 60px;
+  height: 25px;
+  padding: 0 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 7px 5px rgba(82, 81, 81, 0.8);
+  bottom: -100%;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Russo one", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: #fff;
+}
 #light-mode{
   background-color: #fff;
+}
+#light-mode:hover::after{
+  content: "white";
+  color: #fff;
+  background-color: black;
 }
 #blue-mode {
   background-color: #192734;
 }
+#blue-mode:hover::after {
+  color: blue;
+  content: "blue";
+}
 #green-mode{
   background-color: #78846b;
 }
+#green-mode:hover::after {
+  color: green;
+  content: "green";
+}
 #purple-mode {
   background-color: #7e4c74;
+}
+#purple-mode:hover::after {
+  color: purple;
+  content: "purple";
 }
 #settings-note{
   font-size: 12px;
@@ -248,6 +302,9 @@ img{
   background-color: #fff;
   padding: 15px;
 }
+.post-preview a{
+  color: black;
+}
 .post-title{
   margin: 0;
   color: black;
@@ -272,6 +329,7 @@ img{
 textarea{
   max-height: 100px;
   max-width: 600px;
+  scroll-behavior: var(--mainColor);
 }
 .input-field{
   width: 100%;
@@ -288,6 +346,52 @@ textarea{
   padding: 10px 0;
   color: #fff;
   border: none;
+}
+footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-content{
+  color: var(--mainText);
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-family: "Poppins";
+}
+.footer-content span{
+  color: red;
+  font-size: x-large;
+}
+.footer-content a:hover{
+  color: blue;
+  text-decoration: underline;
+  text-decoration-color: #17a2b8;
+  padding-bottom: 30px;
+}
+footer .return{
+  position: sticky;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, purple, blue);
+  padding: 3px;
+}
+footer .arrowdiv {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--mainColor);
+  font-family: 'Poppins';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: white;
+  font-weight: 600;
+}
+
+footer a:active{
+  transition: 1s ease;
 }
 
 

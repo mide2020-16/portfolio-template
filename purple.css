@@ -1,11 +1,12 @@
 :root {
-  --mainColor: #4d344e;
-  --secondaryColor: #382a3f;
-  --borderColor: #1d1520;
-  --mainText: #fff;
+  --mainColor: #926494;
+  --secondaryColor: #442f4e;
+  --borderColor: #280635;
+  --mainText: #f0dbee;
   --secondaryText: #eee;
-  --themeBorder: #fff;
+  --themeBorder: #fc8df6;
   --previewBackground: rgb(29, 21, 32, 0.8);
   --previewShadow: #2b202f;
   --btnColor: #dd18bc;
+  --themeHover: purple;
 }
